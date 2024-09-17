@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/container"
+    android:id="@+id/card_league">
+
+    <RelativeLayout
+        android:id="@+id/lay_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/cup"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cup" />
+
+        <TextView
+            android:id="@+id/league_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/cup"
+            android:layout_toStartOf="@id/bin"
+            android:text="League Maclodio"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/bin" />
+    </RelativeLayout>
+
+    <!-- Tournament Level -->
+    <RelativeLayout
+        android:id="@+id/lay_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_league"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/text_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/league_level"
+            android:text="Level:"
+            android:textSize="20sp" />
+
+        <RatingBar
+            android:id="@+id/league_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            />
+
+    </RelativeLayout>
+
+    <!-- Prize league -->
+
+    <RelativeLayout
+        android:id="@+id/lay_prize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_level"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:id="@+id/text_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="First prize:"
+            android:layout_centerVertical="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/league_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/text_prize"
+            android:text="25.000€"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_numberAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_prize"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/text_numberAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Available places"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/delete"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/numberAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/text_numberAvailable"
+            android:text="10"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/delete"/>
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/more" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

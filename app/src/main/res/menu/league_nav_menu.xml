@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="All League"
+        android:icon="@drawable/search"  android:id="@+id/allLeague" />
+    <item android:title="My League"
+        android:icon="@drawable/cup" android:id="@+id/myleague" />
+    <item android:title="Profile"
+        android:icon="@drawable/profile" android:id="@+id/profile" />
+</menu>

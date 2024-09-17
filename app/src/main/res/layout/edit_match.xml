@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Campo per il punteggio di Team 1 e Team 2 con i nomi delle squadre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_team1_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Team 1"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/et_team1_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/score_background"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:paddingHorizontal="4dp"/>
+
+            <EditText
+                android:id="@+id/et_team2_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/score_background"/>
+
+            <TextView
+                android:id="@+id/tv_team2_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Team 2"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"/>
+        </LinearLayout>
+
+        <!-- LinearLayout per i marcatori di Team 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team 1 Scorers"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_team1_scorers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- LinearLayout per i marcatori di Team 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team 2 Scorers"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_team2_scorers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- Sezione per i cartellini gialli -->
+        <LinearLayout
+            android:id="@+id/ll_yellow_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yellow Cards"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_add_yellow_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Yellow Card"
+                android:backgroundTint="@color/primary"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_yellow_card_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Sezione per i cartellini rossi -->
+        <LinearLayout
+            android:id="@+id/ll_red_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red Cards"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_add_red_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Red Card"
+                android:backgroundTint="@color/primary"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_red_card_players"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+
+        <!-- Pulsanti Save e Cancel vicini -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Cancel"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:backgroundTint="@color/secondary" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/primary"
+                android:text="Save"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

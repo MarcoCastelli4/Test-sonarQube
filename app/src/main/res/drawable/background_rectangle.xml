@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Colore di sfondo bianco -->
+    <corners android:radius="4dp"/> <!-- Angoli arrotondati (opzionale) -->
+</shape>

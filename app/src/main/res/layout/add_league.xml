@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/popup_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add League"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/close"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_league_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="League name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/lay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Football pitch address"/>
+
+                <Button
+                    android:id="@+id/btn_search_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:backgroundTint="@color/primary"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Mappa per visualizzare la posizione -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/osmMapView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"/>
+
+        <!-- Level -->
+        <RelativeLayout
+            android:id="@+id/lay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/edt_league_level"
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/text2"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="0.5" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edt_league_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:layout_marginTop="10dp"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/edt_entryfee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entry fee €"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_league_prize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First prize value €"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/edt_league_restrictions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Restrictions"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/edt_playing_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select playing period"
+                android:layout_marginEnd="50dp"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:id="@+id/btn_playing_period"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/date_range"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of team"
+                android:textSize="17sp"/>
+
+            <Spinner
+                android:id="@+id/edt_maxTeamNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/text_role"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/primary"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="MATCH"
+        android:icon="@drawable/ball"
+        android:id="@+id/match"/>
+    <item android:title="LEAGUE TABLE"
+        android:icon="@drawable/leaderboard"
+        android:id="@+id/leaguetable"/>
+    <item android:title="STATISTICS"
+        android:icon="@drawable/insert_chart"
+        android:id="@+id/statistics"/>
+    <item android:title="COMMUNICATIONS"
+        android:icon="@drawable/mail"
+        android:id="@+id/comunications"/>
+</menu>

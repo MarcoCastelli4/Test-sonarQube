@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "16968048000",
+    "project_id": "leaguepro-6b27d",
+    "storage_bucket": "leaguepro-6b27d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16968048000:android:6bfa018fd1c0dcf43e3565",
+        "android_client_info": {
+          "package_name": "com.example.leaguepro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPKf4culI7vBqZOMVJ0UQPW6oDZkZfvfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <!-- Custom AlertDialog style -->
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomAlertDialogPositiveButton</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomAlertDialogNegativeButton</item>
+    </style>
+
+    <!-- Custom AlertDialog button style -->
+    <style name="CustomAlertDialogNegativeButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="CustomAlertDialogPositiveButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/delete</item>
+    </style>
+
+    <style name="CustomAlertDialogPositive" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:buttonBarPositiveButtonStyle">@style/CustomAlertDialogPositiveButton2</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/CustomAlertDialogNegativeButton2</item>
+    </style>
+
+    <!-- Custom AlertDialog button style -->
+    <style name="CustomAlertDialogNegativeButton2" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="CustomAlertDialogPositiveButton2" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+
+        <!-- Tema personalizzato per il DatePicker -->
+    <!-- Tema personalizzato per il DatePicker -->
+    <style name="CustomDatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorSurface">@color/form</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/secondary</item>
+    </style>
+
+
+
+</resources>

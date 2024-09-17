@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!-- Barra blu orizzontale inizialmente nascosta -->
+    <LinearLayout
+        android:id="@+id/maps_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="#246EE9"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="?attr/selectableItemBackground"
+            android:padding="10dp"
+            android:src="@drawable/back"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="League Maps"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <!-- RelativeLayout for the search bar and map icon -->
+    <RelativeLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/search_icon"
+            android:layout_toStartOf="@id/map_layout"
+            android:drawablePadding="10dp"
+            android:hint="Search for a league"
+            android:padding="10dp"
+            android:textColorHint="#808080" />
+
+        <!-- LinearLayout for the map icon and text -->
+        <LinearLayout
+            android:id="@+id/map_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/map_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/map" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Map"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#246EE9" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Divider Line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D9D9D9" />
+
+    <!-- Mappa nascosta inizialmente -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/osmMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</LinearLayout>

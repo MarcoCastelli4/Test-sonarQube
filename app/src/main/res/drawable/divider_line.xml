@@ -1,0 +1,5 @@
+<!-- res/drawable/divider_line.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="1dp" /> <!-- Spessore della linea -->
+    <solid android:color="#80BAB9B9" /> <!-- Colore grigio con 50% trasparenza -->
+</shape>
